@@ -1,5 +1,4 @@
 # this is really stupid
-import lex # lex.py
 
 def read():
     r = open("test.chicken", "r")

@@ -1,17 +1,27 @@
-import re
+import os
+extension = ".chicken" # temporary var
 
-r = []
+def avaliableFiles():
+    path = './read'
+    files = os.listdir(path)
+
+    for file in files:
+        if '.chicken' in file:
+            print("Avaliable files:")
+            print(file)
+
+# prompts for what file you would like to view (no extension required)
+# adding an extension will break
+f = input("which file > ")
+r = open(f'{f}{extension}', "r")
 
 def read():
-    r = open("test.chicken", "r")
     print(r.read())
 
-text = read()
 
-def apply(r):
-    marked = re.sub(r'\bi\b', '<i>i</i>', r)
-    marked = re.sub(r'\bb\b', '<b>b</b>', marked)
+def start():
+    avaliableFiles()
+    read()
 
-    return marked
+start()
 
-apply()

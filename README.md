@@ -1,2 +1,3 @@
-# chickenml
-my own markup language
+### chickenml
+
+ew .md
